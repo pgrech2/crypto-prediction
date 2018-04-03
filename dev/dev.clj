@@ -43,13 +43,11 @@
 (def train-set (-> (all-data system)
                     (p/extract "BTC")
                     (->> (map p/network-transform)
-                         (take 10000)
                          (sort-by :timestamp))
                     (m/train-set 0.7)))
 (def test-set (-> (all-data system)
                    (p/extract "BTC")
                    (->> (map p/network-transform)
-                        (take 10000)
                         (sort-by :timestamp))
                    (m/test-set 0.7)))
 
