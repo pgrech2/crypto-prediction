@@ -29,7 +29,8 @@
 
   p/Loader
   (records [this]
-    source))
+    source)
+  )
 
 
 (defn loader
