@@ -1,0 +1,13 @@
+Java HotSpot(TM) 64-Bit Server VM (25.66-b17) for bsd-amd64 JRE (1.8.0_66-b17), built on Oct  6 2015 16:09:13 by "java_re" with gcc 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2336.11.00)
+Memory: 4k page, physical 16777216k(59640k free)
+
+/proc/meminfo:
+
+CommandLine flags: -XX:InitialHeapSize=6442450944 -XX:MaxHeapSize=11811160064 -XX:+PrintGC -XX:+PrintGCTimeStamps -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseParallelGC 
+2.489: [GC (Metadata GC Threshold)  377488K->13854K(6029312K), 0.0174111 secs]
+2.506: [Full GC (Metadata GC Threshold)  13854K->13364K(6029312K), 0.0419232 secs]
+5.451: [GC (Metadata GC Threshold)  852232K->44055K(6029312K), 0.0397768 secs]
+5.491: [Full GC (Metadata GC Threshold)  44055K->36967K(6455808K), 0.0823219 secs]
+9.254: [GC (Allocation Failure)  1609831K->149043K(6455808K), 0.1749233 secs]
+475.455: [GC (Metadata GC Threshold)  1230890K->142624K(7008768K), 0.1694347 secs]
+475.625: [Full GC (Metadata GC Threshold)  142624K->127669K(8426496K), 0.2808845 secs]
