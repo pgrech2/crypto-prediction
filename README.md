@@ -1,6 +1,6 @@
 # crypto-prediction
 
-A Clojure library designed to ... well, that part is up to you.
+https://www.kaggle.com/jessevent/all-crypto-currencies
 
 ## Usage
 

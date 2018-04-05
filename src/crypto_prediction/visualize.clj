@@ -12,10 +12,8 @@
                 (take 5 (repeatedly (partial rand-int 100))))
           names))
 
-(defn line-plot [sym records]
-  {:data {:values (->> records
-                       (filter (comp (partial = sym) :col))
-                       (take-nth 5))}
+(defn line-plot [records]
+  {:data {:values records}
    :encoding {:x {:timeUnit "yearmonthdate"
                   :field "x"}
               :y {:field "y"}
@@ -26,4 +24,18 @@
    :height "1000"})
 
 (defn plot [data]
-  (oz/v! (line-plot data "BTC-open")))
+  (oz/v! (line-plot (->> data
+                         (filter (comp (partial = sym) :col))
+                         (take-nth 5))
+                    "BTC-open")))
+
+(defn line-plot-results [records]
+  {:data {:values records}
+   :encoding {:x {:timeUnit "yearmonthdate"
+                  :field "x"}
+              :y {:field "y"}
+              :color {:field "col" :type "nominal"}}
+   :mark {:type "line"
+          :interpolate "step-after"}
+   :width "1000"
+   :height "1000"})

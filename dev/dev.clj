@@ -45,15 +45,11 @@
                     (->> (map p/network-transform)
                          (sort-by :timestamp))
                     (m/train-set 0.7)))
+
 (def test-set (-> (all-data system)
                    (p/extract "BTC")
                    (->> (map p/network-transform)
                         (sort-by :timestamp))
                    (m/test-set 0.7)))
 
-(def trained  (binding [*out* (clojure.java.io/writer "my-training.log")]
-                (train/train-n m/network train-set test-set
-                               :batch-size 100
-                               :network-filestem "my-fn"
-                               :epoch-count 3000)))
-;; (execute/run trained [{:x [0 1]}])
+(def trained (util/read-nippy-file "my-fn.nippy"))
